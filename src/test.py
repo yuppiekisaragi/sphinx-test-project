@@ -1,10 +1,15 @@
+"""
+src/test.py: Contains basic classes/methods for Sphinx testing
+"""
+
 class TestClass():
     """
     Simple class containing various documented methods for Sphinx testing
 
     """
+    # pylint: disable=too-few-public-methods
 
-    def fib(self, sequence = [], steps=5):
+    def fib(self, sequence = None, steps=5):
         """
         Recursively return the Fibonacci sequence as a list, up to N steps.
 
@@ -24,6 +29,4 @@ class TestClass():
             sequence.append(sequence[-2] + sequence[-1])
             self.fib(sequence=sequence, steps=steps)
 
-        else:
-            return sequence
-
+        return sequence
