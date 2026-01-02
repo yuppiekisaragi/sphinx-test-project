@@ -1,3 +1,8 @@
+import os
+import sys
+#start at the 'sphinx-test-project' level
+sys.path.insert(0, os.path.abspath('../..'))
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -13,7 +18,11 @@ author = 'Rachel Simon'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    'sphinx.ext.duration',
+    'sphinx.ext.doctest',
+    'sphinx.ext.autodoc'
+]
 
 templates_path = ['_templates']
 exclude_patterns = []
